@@ -1,0 +1,5 @@
+pytest~=6.2.5
+requests~=2.26.0
+tabulate~=0.8.9
+DateTime~=4.3
+selenium~=4.1.0
