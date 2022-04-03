@@ -1,0 +1,87 @@
+# примеры API-запросов
+
+# создание объявления Иванов
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 9cdd96b01acdd879cdb6b7dd2164f26ed13cbb7e
+
+{
+  "title": "ОБОИ",
+  "description": "25 метров"
+}
+
+###
+
+# создание объявления Петров
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 11b7d43b5b10c708016da8570f1039e9f31e7c03
+
+{
+  "title": "Стол дубовый",
+  "description": "Срочно"
+}
+
+###
+
+# попытка поменять объявление
+PATCH {{baseUrl}}/advertisements/4/
+Content-Type: application/json
+Authorization: Token 9cdd96b01acdd879cdb6b7dd2164f26ed13cbb7e
+
+{
+  "status": "DRAFT"
+}
+
+###
+
+# попытка удалить объявление
+DELETE {{baseUrl}}/advertisements/17/
+Content-Type: application/json
+
+
+###
+
+# получение объявлений
+GET {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 9cdd96b01acdd879cdb6b7dd2164f26ed13cbb7e
+
+###
+
+# фильтрация по создателю
+GET {{baseUrl}}/advertisements/?creator=3&status=OPEN
+Content-Type: application/json
+
+###
+
+# фильтрация по статусу
+GET {{baseUrl}}/advertisements/?status=OPEN
+Content-Type: application/json
+
+###
+
+# фильтрация по дате
+GET {{baseUrl}}/advertisements/?created_at_after=2022-10-01
+Content-Type: application/json
+
+###
+
+# добавление объявления в избранное для пользователя
+POST {{baseUrl}}/advertisements/2/add_favorite/
+Content-Type: application/json
+Authorization: Token 11b7d43b5b10c708016da8570f1039e9f31e7c03
+
+###
+
+# удаление объявления из избранного для пользователя
+DELETE {{baseUrl}}/advertisements/2/del_favorite/
+Content-Type: application/json
+Authorization: Token 9cdd96b01acdd879cdb6b7dd2164f26ed13cbb7e
+
+###
+
+# получение избранных объявлений
+GET {{baseUrl}}/advertisements/favorites/
+Content-Type: application/json
+Authorization: Token e279dd6a981ca4b706428408d30325364df841b6

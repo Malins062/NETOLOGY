@@ -1,0 +1,65 @@
+[
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "name": "Война и мир",
+      "author": "Ф.Д. Достоевский",
+      "pub_date": "2018-02-27"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "name": "1984",
+      "author": "Джордж Оруэл",
+      "pub_date": "2016-12-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "name": "Мячик",
+      "author": "Майкл Оуен",
+      "pub_date": "2016-12-07"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Дама в носках",
+      "author": "Николас Кейдж",
+      "pub_date": "2016-12-08"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "name": "Футбол",
+      "author": "Марио Лемье",
+      "pub_date": "2019-10-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "name": "Пацаны",
+      "author": "Алексей Иванов",
+      "pub_date": "2013-10-07"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "name": "Учитель",
+      "author": "Антон Крымский",
+      "pub_date": "2020-10-07"
+    }
+  }
+]

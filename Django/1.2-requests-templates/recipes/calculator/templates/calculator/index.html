@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепты</title>
+</head>
+<body>
+{% if dish %}
+    <h1>Блюдо: {{ dish }}</h1>
+    <table>
+        <caption>Рецепт</caption>
+        <tr>
+            <th>Ингридиент</th>
+            <th>Количество</th>
+        </tr>
+        {% for ingredient, amount in recipe.items %}
+            <tr><td>{{ ingredient }}</td><td>{{ amount }}</td></tr>
+        {% empty %}
+            <tr>Рецепт для данного блюдо отсутствует!</tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>Блюдо не найдено</p>
+{% endif %}
+</body>
+</html>

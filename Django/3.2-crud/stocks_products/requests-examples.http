@@ -1,0 +1,97 @@
+# создание продукта
+POST {{baseUrl}}/products/
+Content-Type: application/json
+
+{
+  "title": "Слива",
+  "description": "Альпийская"
+}
+
+###
+
+# получение продуктов
+GET {{baseUrl}}/products/
+Content-Type: application/json
+
+###
+
+# получение продуктов
+GET {{baseUrl}}/products/?page=2
+Content-Type: application/json
+
+###
+
+# обновление продукта
+PATCH {{baseUrl}}/products/4/
+Content-Type: application/json
+
+{
+  "description": "Самые сочные и ароматные помидоры"
+}
+
+###
+
+# удаление продукта
+DELETE {{baseUrl}}/products/4/
+Content-Type: application/json
+
+###
+
+# поиск продуктов по названию и описанию
+GET {{baseUrl}}/products/?search=Бан
+Content-Type: application/json
+
+###
+
+# удаление со склада
+DELETE {{baseUrl}}/stocks/6/
+
+###
+
+# создание склада
+POST {{baseUrl}}/stocks/
+Content-Type: application/json
+
+{
+  "address": "СКЛАД 44",
+  "positions": [
+    {
+      "product": 3,
+      "quantity": 122,
+      "price": 110.50
+    },
+    {
+      "product": 7,
+      "quantity": 51,
+      "price": 104
+    }
+  ]
+}
+
+###
+
+# обновляем записи на складе
+PATCH {{baseUrl}}/stocks/11/
+Content-Type: application/json
+
+{
+  "positions": [
+    {
+      "product": 8,
+      "quantity": 21,
+      "price": 43
+    }
+  ]
+}
+
+###
+
+# поиск складов, где есть определенный продукт
+GET {{baseUrl}}/stocks/?product=яблоко
+Content-Type: application/json
+
+###
+
+# получение складов
+GET {{baseUrl}}/stocks/11/
+Content-Type: application/json
